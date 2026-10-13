@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/logs/index",
+    "pages/logs/logs",
+    "pages/category/category",
+    "pages/order/order",
+    "pages/center/center",
+    "pages/detail/detail"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/welcome/welcome",
+        "text": "首页",
+        "iconPath": "assets/img/taber/index.png",
+        "selectedIconPath": "assets/img/taber/index_1.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "assets/img/taber/category.png",
+        "selectedIconPath": "assets/img/taber/category_1.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "assets/img/taber/order.png",
+        "selectedIconPath": "assets/img/taber/order_1.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "我的",
+        "iconPath": "assets/img/taber/person.png",
+        "selectedIconPath": "assets/img/taber/person_1.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Market",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  }
+}

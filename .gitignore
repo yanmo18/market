@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+miniprogram_npm/
+**/node_modules/
+**/miniprogram_npm/
+
+# build
+dist/
+unpackage/
+target/
+*.class
+*.jar
+!**/src/main/**
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# env / local
+.env
+.env.*
+!.env.example
+project.private.config.json
+
+# logs
+*.log
+npm-debug.log*

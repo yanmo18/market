@@ -1,0 +1,29 @@
+/* pages/order/order.wxss */
+
+page {
+  background: #eef6f1;
+  font-family: -apple-system, 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+}
+
+/* Vant tabs 覆盖 */
+.van-tabs {
+  background: #fff !important;
+}
+
+/* 订单列表 */
+.order-list {
+  padding: 20rpx 28rpx;
+}
+
+/* 卡片底部按钮 */
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 底部安全区 */
+.footer-safe {
+  height: 40rpx;
+}

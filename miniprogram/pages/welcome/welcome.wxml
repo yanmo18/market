@@ -1,0 +1,32 @@
+<!--pages/welcome/welcome.wxml-->
+<view>
+  <swiper class="swiper-container" autoplay="{{true}}" interval="2000" indicator-dots="{{true}}">
+    <swiper-item wx:for="{{swiperImgs}}" wx:key="index">
+      <!-- for循环中使用变量,需要使用双大括号，key是可以让swiper-item的key值唯一-->
+      <image class="swiper-img" src="{{item}}"></image>
+    </swiper-item>
+  </swiper>
+  <view class="middle-container">
+    <view class="wrapper" wx:for="{{navList}}" wx:key="text">
+      <image src="{{item.icon}}"></image>
+      <view class="comment">{{item.text}}</view>
+    </view>
+  </view>
+  <!-- <button class="primary" bindtap="enter">enter</button>
+  <button class="primary" bindtap="go">go</button> 测试-->
+  <!-- <button class="primary" bindtap="test">test</button> -->
+  <view class="foot-container">
+  <view class="foot-card" wx:for="{{results}}">
+    <image src="{{item.picture}}" bind:tap="lookfor" data-id="{{item.id}}" data-picture="{{item.picture}}" data-name="{{item.name}}" data-madein="{{item.madein}}" data-price="{{item.price}}"></image>
+    <!-- bind:tap="lookfor"绑定点击事件 -->
+    <view class="card-text">
+    <view class="card-text-head">{{item.name}}</view>
+    <view class="card-text-foot">
+    <view class="card-main">
+    {{item.madein}}</view>
+    <view class="card-price">$:{{item.price}}元</view>
+    </view>
+  </view>
+  </view>
+  </view>
+</view>

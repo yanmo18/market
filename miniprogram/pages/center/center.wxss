@@ -1,0 +1,296 @@
+/* pages/center/center.wxss */
+
+/* ========================================
+   基础
+   ======================================== */
+page {
+  background: #eef6f1;
+  font-family: -apple-system, 'Helvetica Neue', sans-serif;
+}
+
+/* ========================================
+   头部
+   ======================================== */
+.header {
+  position: relative;
+  padding-bottom: 48rpx;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 440rpx;
+  background: linear-gradient(155deg, #a8e6cf 0%, #56b870 50%, #3ca55c 100%);
+  border-radius: 0 0 48rpx 48rpx;
+}
+
+/* 波纹底边装饰 */
+.header-bg::after {
+  content: '';
+  position: absolute;
+  bottom: -4rpx;
+  left: 0;
+  right: 0;
+  height: 36rpx;
+  background: #eef6f1;
+  border-radius: 50% 50% 0 0;
+}
+
+.header-profile {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 56rpx;
+}
+
+/* ======== 头像环 - 用 flex 居中修复偏移 ======== */
+.avatar-ring {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  padding: 8rpx;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.5));
+  box-shadow: 0 12rpx 40rpx rgba(60,165,92,0.28);
+  margin-bottom: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.avatar {
+  width: 164rpx;
+  height: 164rpx;
+  border-radius: 50%;
+  display: block;
+  background: #e0f0e5;
+}
+
+.profile-name {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2rpx;
+  text-shadow: 0 2rpx 8rpx rgba(0,0,0,0.12);
+}
+
+.profile-id {
+  font-size: 24rpx;
+  color: rgba(255,255,255,0.72);
+  margin-top: 8rpx;
+  letter-spacing: 1rpx;
+}
+
+/* ========================================
+   统计条
+   ======================================== */
+.stats-row {
+  display: flex;
+  align-items: center;
+  margin: -28rpx 28rpx 20rpx;
+  padding: 28rpx 0;
+  background: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0,0,0,0.04);
+  position: relative;
+  z-index: 3;
+}
+
+.stats-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats-num {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #3ca55c;
+  line-height: 1.2;
+}
+
+.stats-label {
+  font-size: 22rpx;
+  color: #999;
+  margin-top: 6rpx;
+}
+
+.stats-split {
+  width: 2rpx;
+  height: 46rpx;
+  background: #e8f0ea;
+}
+
+/* ========================================
+   通用分区
+   ======================================== */
+.section {
+  margin: 0 28rpx 20rpx;
+}
+
+.section-title {
+  font-size: 26rpx;
+  color: #999;
+  padding: 6rpx 8rpx 14rpx;
+  letter-spacing: 2rpx;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 2rpx 16rpx rgba(0,0,0,0.03);
+  overflow: hidden;
+}
+
+/* ========================================
+   订单状态入口
+   ======================================== */
+.order-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28rpx 28rpx 0;
+}
+
+.order-head-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.order-head-more {
+  font-size: 24rpx;
+  color: #3ca55c;
+}
+
+.order-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 24rpx 10rpx 28rpx;
+}
+
+.order-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.order-emoji {
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.order-text {
+  font-size: 22rpx;
+  color: #666;
+}
+
+/* ========================================
+   服务宫格
+   ======================================== */
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8rpx 0 4rpx;
+}
+
+.svc-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24rpx 0;
+}
+
+.svc-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  margin-bottom: 12rpx;
+}
+
+.svc-text {
+  font-size: 22rpx;
+  color: #666;
+}
+
+/* 服务图标底色 */
+.s-blue   { background: #e6f7ff; }
+.s-pink   { background: #fff0f6; }
+.s-yellow { background: #fffbe6; }
+.s-green  { background: #f0faf0; }
+.s-purple { background: #f9f0ff; }
+.s-orange { background: #fff7e6; }
+.s-teal   { background: #e6fffb; }
+.s-gray   { background: #f5f5f5; }
+
+/* ========================================
+   个人信息行
+   ======================================== */
+.info-row {
+  display: flex;
+  align-items: center;
+  padding: 28rpx 28rpx;
+  border-bottom: 1rpx solid #f3f6f4;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-dot {
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  margin-right: 18rpx;
+  flex-shrink: 0;
+}
+
+.dot-blue   { background: #69c0ff; }
+.dot-pink   { background: #ffadd2; }
+.dot-yellow { background: #ffe58f; }
+.dot-purple { background: #d3adf7; }
+.dot-green  { background: #95de64; }
+.dot-orange { background: #ffd591; }
+
+.info-label {
+  font-size: 28rpx;
+  color: #888;
+  width: 130rpx;
+}
+
+.info-val {
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========================================
+   底部
+   ======================================== */
+.footer-space {
+  height: 60rpx;
+}
+
+/* 个人信息上移 - 紧贴服务宫格 */
+.section-info {
+  margin-top: -8rpx;
+}
+
+.section-info .section-title {
+  padding-bottom: 10rpx;
+}

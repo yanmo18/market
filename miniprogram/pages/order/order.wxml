@@ -1,0 +1,33 @@
+<!--
+  订单页 wxml
+  结构：van-tabs 标签栏 + van-card 订单卡片列表 + 底部安全区
+  数据源：JS 中的 displayOrders（由 filterOrders 按当前标签过滤）
+-->
+<!--pages/order/order.wxml-->
+
+<!-- ==================== 标签栏 ==================== -->
+<van-tabs bind:click="tabClick" active="{{active}}" bind:change="onTabChange" color="#3ca55c" title-active-color="#3ca55c">
+  <van-tab wx:for="{{tabs}}" wx:key="index" title="{{item.title}}" name="{{item.state}}"></van-tab>
+</van-tabs>
+
+<!-- ==================== 订单列表 ==================== -->
+<view class="order-list">
+  <block wx:for="{{displayOrders}}" wx:for-item="ele" wx:key="id">
+    <van-card
+      price="{{ele.total}}"
+      title="{{ele.name}}"
+      thumb="{{ele.goodsImg}}"
+      tag="{{ele.state == '0' ? '待发货' : ele.state == '1' ? '待收货' : '已完成'}}"
+    >
+      <!-- 底部操作按钮：通过 data-action 区分 cancel / receive / review -->
+      <view slot="footer" class="card-footer">
+        <van-button wx:if="{{ele.state == '0'}}" type="info" size="mini" bind:tap="confirm" data-id="{{ele.id}}" data-action="cancel">取消订单</van-button>
+        <van-button wx:if="{{ele.state == '1'}}" type="danger" size="mini" bind:tap="confirm" data-id="{{ele.id}}" data-action="receive">确认收货</van-button>
+        <van-button wx:if="{{ele.state == '2'}}" color="#52c41a" size="mini" bind:tap="confirm" data-id="{{ele.id}}" data-action="review">评价</van-button>
+      </view>
+    </van-card>
+  </block>
+</view>
+
+<!-- ==================== 底部安全区 ==================== -->
+<view class="footer-safe"></view>

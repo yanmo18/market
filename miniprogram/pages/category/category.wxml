@@ -1,0 +1,28 @@
+<!--pages/category/category.wxml-->
+<!-- <text>pages/category/category.wxml</text>
+<van-button type="warning">00</van-button>
+<van-button type="default">默认按钮</van-button>
+<van-button type="primary">主要按钮</van-button>
+<van-button type="info">信息按钮</van-button>
+<van-button type="warning">警告按钮</van-button>
+<van-button type="danger">危险按钮</van-button>
+<van-tag type="warning">xxxxvan</van-tag> -->
+<view>
+<!-- <van-button type="primary" bind:tap="loadItems">primary</van-button> -->
+<!-- <view>调试,当前navIndex:{{currentnavIndex}}</view> -->
+<van-tree-select items="{{navItems}}" bind:click-nav="clickNav" main-active-index="{{currentnavIndex}}" height="auto">
+<view slot="content">
+  <view wx:for="{{currentProducts}}">
+<van-card
+  num="{{item.store}}"
+  title="{{item.name}}"
+  desc="{{item.info}}"
+  price="{{item.price}}"
+  thumb="{{item.picture}}"
+  data-id="{{item.id}}"
+  bind:tap="lookfor"
+/>
+</view>
+</view>
+</van-tree-select>
+</view>

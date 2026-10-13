@@ -1,0 +1,105 @@
+/* pages/detail/detail.wxss */
+.detail-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx;
+}
+.detail-image{
+  width: 600rpx;
+  height: 500rpx;
+  border-radius: 20rpx;
+}
+.detail-info{
+  width: 100%;
+  margin-top: 40rpx;
+}
+.detail-name{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.detail-meta{
+  display: flex;
+  align-items: baseline;
+  margin-top: 20rpx;
+}
+.detail-price{
+  font-size: 40rpx;
+  color: #e4393c;
+  font-weight: bold;
+}
+.detail-unit{
+  font-size: 28rpx;
+  color: #999;
+  margin-left: 6rpx;
+}
+.detail-madein{
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 16rpx;
+}
+.detail-company{
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+.detail-store{
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+.detail-type{
+  font-size: 26rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+.detail-info-text{
+  font-size: 28rpx;
+  color: #555;
+  margin-top: 24rpx;
+  padding: 20rpx;
+  background: #f8f8f8;
+  border-radius: 12rpx;
+  line-height: 1.6;
+}
+
+/* 数量选择 */
+.num-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+.num-btn {
+  width: 64rpx;
+  height: 64rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  color: #333;
+  background: #fff;
+}
+.num-value {
+  width: 120rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+.total-price {
+  margin-top: 24rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #e4393c;
+}
+
+.buy-btn{
+  width: 80%;
+  margin-top: 60rpx;
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 40rpx;
+}

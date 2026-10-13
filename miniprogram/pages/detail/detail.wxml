@@ -1,0 +1,25 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail-container">
+  <image class="detail-image" src="{{product.picture}}" mode="aspectFill"></image>
+  <view class="detail-info">
+    <view class="detail-name">{{product.name}}</view>
+    <view class="detail-meta">
+      <text class="detail-price">$ {{product.price}}</text>
+      <text class="detail-unit"> / {{product.unit}}</text>
+    </view>
+    <view class="detail-madein">产地: {{product.madein}}</view>
+    <view class="detail-company">品牌: {{product.company}}</view>
+    <view class="detail-store">库存: {{product.store}} 件</view>
+    <view class="detail-type">分类: {{product.typeName}}</view>
+    <view class="detail-info-text">{{product.info}}</view>
+  </view>
+
+  <!-- 数量选择 -->
+  <view class="num-box">
+    <view class="num-btn" bindtap="subNum">-</view>
+    <view class="num-value">{{num}}</view>
+    <view class="num-btn" bindtap="addNum">+</view>
+  </view>
+  <view class="total-price">合计：¥{{totalPrice}}</view>
+  <button class="buy-btn" bindtap="buyNow">立即购买</button>
+</view>

@@ -1,0 +1,140 @@
+<!--pages/center/center.wxml-->
+<!-- 顶部背景 + 个人资料 -->
+<view class="header">
+  <view class="header-bg"></view>
+  <view class="header-profile">
+    <view class="avatar-ring">
+      <image class="avatar" src="{{user.photo}}" mode="aspectFill"></image>
+    </view>
+    <view class="profile-name">{{user.realname || '微信用户'}}</view>
+    <view class="profile-id">ID: {{user.id}}</view>
+  </view>
+</view>
+
+<!-- 数据统计 -->
+<view class="stats-row">
+  <view class="stats-item">
+    <view class="stats-num">{{user.money || 0}}</view>
+    <view class="stats-label">我的积分</view>
+  </view>
+  <view class="stats-split"></view>
+  <view class="stats-item">
+    <view class="stats-num">{{orderCount}}</view>
+    <view class="stats-label">全部订单</view>
+  </view>
+  <view class="stats-split"></view>
+  <view class="stats-item">
+    <view class="stats-num">{{couponCount}}</view>
+    <view class="stats-label">优惠券</view>
+  </view>
+</view>
+
+<!-- 订单状态快捷入口 -->
+<view class="section">
+  <view class="card">
+    <view class="order-head">
+      <text class="order-head-title">我的订单</text>
+      <text class="order-head-more" bindtap="goOrder">查看全部 ›</text>
+    </view>
+    <view class="order-icons">
+      <view class="order-item">
+        <text class="order-emoji">💳</text>
+        <text class="order-text">待付款</text>
+      </view>
+      <view class="order-item">
+        <text class="order-emoji">📦</text>
+        <text class="order-text">待发货</text>
+      </view>
+      <view class="order-item">
+        <text class="order-emoji">🚚</text>
+        <text class="order-text">待收货</text>
+      </view>
+      <view class="order-item">
+        <text class="order-emoji">⭐</text>
+        <text class="order-text">待评价</text>
+      </view>
+      <view class="order-item">
+        <text class="order-emoji">🛠️</text>
+        <text class="order-text">售后</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 我的服务 宫格 -->
+<view class="section">
+  <view class="section-title">我的服务</view>
+  <view class="card service-grid">
+    <view class="svc-item">
+      <view class="svc-icon s-blue">❤️</view>
+      <text class="svc-text">我的收藏</text>
+    </view>
+    <view class="svc-item">
+      <view class="svc-icon s-pink">👣</view>
+      <text class="svc-text">浏览足迹</text>
+    </view>
+    <view class="svc-item">
+      <view class="svc-icon s-yellow">📍</view>
+      <text class="svc-text">收货地址</text>
+    </view>
+    <view class="svc-item">
+      <view class="svc-icon s-green">💬</view>
+      <text class="svc-text">联系客服</text>
+    </view>
+    <view class="svc-item">
+      <view class="svc-icon s-purple">🎫</view>
+      <text class="svc-text">我的卡券</text>
+    </view>
+    <view class="svc-item">
+      <view class="svc-icon s-orange">🏪</view>
+      <text class="svc-text">店铺关注</text>
+    </view>
+    <view class="svc-item">
+      <view class="svc-icon s-teal">📋</view>
+      <text class="svc-text">我的评价</text>
+    </view>
+    <view class="svc-item">
+      <view class="svc-icon s-gray">⚙️</view>
+      <text class="svc-text">设置</text>
+    </view>
+  </view>
+</view>
+
+<!-- 个人信息 -->
+<view class="section section-info">
+  <view class="section-title">个人信息</view>
+  <view class="card">
+    <view class="info-row">
+      <text class="info-dot dot-blue"></text>
+      <text class="info-label">用户名</text>
+      <text class="info-val">{{user.username || '未设置'}}</text>
+    </view>
+    <view class="info-row">
+      <text class="info-dot dot-pink"></text>
+      <text class="info-label">手机号</text>
+      <text class="info-val">{{user.phone || '未绑定'}}</text>
+    </view>
+    <view class="info-row">
+      <text class="info-dot dot-yellow"></text>
+      <text class="info-label">邮箱</text>
+      <text class="info-val">{{user.email || '未绑定'}}</text>
+    </view>
+    <view class="info-row" wx:if="{{user.sex !== null}}">
+      <text class="info-dot dot-purple"></text>
+      <text class="info-label">性别</text>
+      <text class="info-val">{{user.sex === 1 ? '男' : '女'}}</text>
+    </view>
+    <view class="info-row" wx:if="{{user.age}}">
+      <text class="info-dot dot-green"></text>
+      <text class="info-label">年龄</text>
+      <text class="info-val">{{user.age}} 岁</text>
+    </view>
+    <view class="info-row" wx:if="{{user.address}}">
+      <text class="info-dot dot-orange"></text>
+      <text class="info-label">地址</text>
+      <text class="info-val">{{user.address}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="footer-space"></view>
