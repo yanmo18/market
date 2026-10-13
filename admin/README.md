@@ -1,19 +1,12 @@
-# hello
+# admin — Market 管理后台
 
-## Project setup
-```
+Vue 2 + Element UI + Vue CLI。开发默认端口 **8080**，API 默认 `http://localhost:9090`。
+
+完整说明见仓库根目录 [README.md](../README.md)。
+
+```bash
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+生产构建：`npm run build` → 部署 `dist/`。
